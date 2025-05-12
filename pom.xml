@@ -19,6 +19,7 @@
 
 	<properties>
 	    <java-version-compliance>11</java-version-compliance>
+		<native.maven.plugin.version>0.10.6</native.maven.plugin.version>
 	</properties>	
 
 	<organization>
@@ -56,5 +57,45 @@
 		</dependency>
 
 	</dependencies>
+
+	<profiles>
+
+		<profile>
+
+			<id>native</id>
+
+			<build>
+
+				<plugins>
+
+					<plugin>
+						<groupId>org.graalvm.buildtools</groupId>
+						<artifactId>native-maven-plugin</artifactId>
+						<version>${native.maven.plugin.version}</version>
+						<extensions>true</extensions>
+						<executions>
+							<execution>
+								<id>build-native</id>
+								<goals>
+									<goal>compile-no-fork</goal>
+								</goals>
+								<phase>package</phase>
+							</execution>
+						</executions>
+						<configuration>
+							<buildArgs>
+								<buildArg>-H:IncludeResources=^templates/.*</buildArg>
+							</buildArgs>
+							<mainClass>org.fugerit.java.poc.freemarker.graalvm.FreeMarkerDemo</mainClass>
+						</configuration>
+					</plugin>
+
+				</plugins>
+
+			</build>
+
+		</profile>
+
+	</profiles>
 		
 </project>
