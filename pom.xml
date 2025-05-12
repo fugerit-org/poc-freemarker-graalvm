@@ -20,6 +20,8 @@
 	<properties>
 	    <java-version-compliance>11</java-version-compliance>
 		<native.maven.plugin.version>0.10.6</native.maven.plugin.version>
+		<github-client.version>0.4.4</github-client.version>
+		<jgit.version>7.2.0.202503040940-r</jgit.version>
 	</properties>	
 
 	<organization>
@@ -47,6 +49,18 @@
 			<groupId>org.freemarker</groupId>
 			<artifactId>freemarker-gae</artifactId>
 			<version>2.3.35-SNAPSHOT</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.spotify</groupId>
+			<artifactId>github-client</artifactId>
+			<version>${github-client.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.eclipse.jgit</groupId>
+			<artifactId>org.eclipse.jgit</artifactId>
+			<version>${jgit.version}</version>
 		</dependency>
 
 		<dependency>
