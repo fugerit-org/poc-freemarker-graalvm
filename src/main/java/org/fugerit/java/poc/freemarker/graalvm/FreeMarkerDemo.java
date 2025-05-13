@@ -7,19 +7,11 @@ public class FreeMarkerDemo {
             if ( args.length > 0 ) {
                 Class.forName( args[0] );
             }
-            handle();
+            Class<?> c = Class.forName( "org.fugerit.java.poc.freemarker.graalvm.FreeMarkerDemoLauncher" );
+            c.getConstructor().newInstance();
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
     }
-
-    private static void handle() {
-        FreeMarkerDemoFacade demo = new FreeMarkerDemoFacade();
-        // test a template whose processing will fail
-        demo.runKoTemplate();
-        // test a template whose processing succeeds
-        demo.runVersionTemplate();
-    }
-
 
 }

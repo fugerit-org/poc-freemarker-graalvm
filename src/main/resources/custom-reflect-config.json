@@ -1,0 +1,7 @@
+[{
+  "name" : "org.fugerit.java.poc.freemarker.graalvm.FreeMarkerDemoLauncher",
+  "methods" : [ {
+    "name" : "<init>",
+    "parameterTypes" : [ ]
+  } ]
+}]

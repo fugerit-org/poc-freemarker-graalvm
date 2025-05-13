@@ -97,6 +97,7 @@
 						<configuration>
 							<buildArgs>
 								<buildArg>-H:IncludeResources=^templates/.*</buildArg>
+								<buildArg>-H:ReflectionConfigurationFiles=src/main/resources/custom-reflect-config.json</buildArg>
 							</buildArgs>
 							<mainClass>org.fugerit.java.poc.freemarker.graalvm.FreeMarkerDemo</mainClass>
 						</configuration>
