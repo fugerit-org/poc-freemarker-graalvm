@@ -19,7 +19,6 @@
 
 	<properties>
 		<maven.compiler.release>21</maven.compiler.release>
-		<build.plugins.plugin.version>3.14.0</build.plugins.plugin.version>
 		<freemarker-gae-version>2.3.35-SNAPSHOT</freemarker-gae-version>
 		<native.maven.plugin.version>0.10.6</native.maven.plugin.version>
 		<jupipter-junit-version>5.12.2</jupipter-junit-version>
