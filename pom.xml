@@ -18,11 +18,12 @@
 	</licenses>
 
 	<properties>
-		<maven.compiler.release>21</maven.compiler.release>
-		<freemarker-gae-version>2.3.35-SNAPSHOT</freemarker-gae-version>
-		<native.maven.plugin.version>0.10.6</native.maven.plugin.version>
-		<jupipter-junit-version>5.12.2</jupipter-junit-version>
-	</properties>	
+        <maven.compiler.release>21</maven.compiler.release>
+        <freemarker-gae-version>2.3.35-SNAPSHOT</freemarker-gae-version>
+        <native.maven.plugin.version>0.10.6</native.maven.plugin.version>
+        <jupipter-junit-version>5.12.2</jupipter-junit-version>
+        <slf4j-api-version>2.0.17</slf4j-api-version>
+    </properties>
 
 	<organization>
 		<url>https://www.fugerit.org</url>
@@ -45,18 +46,30 @@
 
 	<dependencies>
 
-		<dependency>
-			<groupId>org.freemarker</groupId>
-			<artifactId>freemarker-gae</artifactId>
-			<version>${freemarker-gae-version}</version>
-		</dependency>
+        <dependency>
+            <groupId>org.freemarker</groupId>
+            <artifactId>freemarker-gae</artifactId>
+            <version>${freemarker-gae-version}</version>
+        </dependency>
 
-		<dependency>
-			<groupId>org.junit.jupiter</groupId>
-			<artifactId>junit-jupiter-api</artifactId>
-			<version>${jupipter-junit-version}</version>
-			<scope>test</scope>
-		</dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${slf4j-api-version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-simple</artifactId>
+            <version>${slf4j-api-version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>${jupipter-junit-version}</version>
+            <scope>test</scope>
+        </dependency>
 
 	</dependencies>
 
