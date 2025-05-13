@@ -3,6 +3,18 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<artifactId>poc-freemarker-graalvm</artifactId>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>13</source>
+					<target>13</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 	<groupId>org.fugerit.java.demo</groupId>
 
 	<name>Proof Of Concept for Apache FreeMarker and GraalVM</name>
@@ -18,7 +30,7 @@
 	</licenses>
 
 	<properties>
-	    <java-version-compliance>11</java-version-compliance>
+		<maven.compiler.release>21</maven.compiler.release>
 		<native.maven.plugin.version>0.10.6</native.maven.plugin.version>
 	</properties>	
 
